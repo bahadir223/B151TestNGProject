@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
@@ -20,19 +21,29 @@ public class C02_Ignore {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
     }
 
-    @Test(priority = 1)
+    /*
+    Birden fazla test methodu calistirmak istedigimizde o anlık gereksiz gördüğümüz test methodunu atlamak(ignore)
+    isteyebiliriz. Bunun icin @Test notasyonu üstüne ya da yanına @Ignore notasyonu eklememiz yeterlidir.
+    @Ignore notasyonu ile atladığımız method konsolda gözükmez, raporlarda gözükür.
+
+    Eğer bir methodu tamamen iptal etmek isterseniz @Test notasyonundan sonra parametre olarak (enable = false)
+    kullanabilirsiniz.
+     */
+
+    @Ignore
+    @Test
     public void amazonTest() {
-        driver.get("https://amazon.com");   // --> 2. olarak amazon calissin.
+        driver.get("https://amazon.com");
+    }
+
+    @Test(enabled = false)                  // görüldüğü üzere run işareti kalktı...
+    public void youtTubeTest() {
+        driver.get("https://youtube.com");
     }
 
     @Test
-    public void youtTubeTest() {
-        driver.get("https://youtube.com");  // --> ilk önce youtube calissin.
-    }
-
-    @Test(priority = 2)
     public void facebookTest() {
-        driver.get("https://facebook.com"); // --> Son olarak facebook calissin.
+        driver.get("https://facebook.com");
     }
 
     @AfterMethod
