@@ -30,8 +30,8 @@ public class C02_Ignore {
     kullanabilirsiniz.
      */
 
-    @Ignore
-    @Test
+
+    @Test @Ignore
     public void amazonTest() {
         driver.get("https://amazon.com");
     }
@@ -48,6 +48,6 @@ public class C02_Ignore {
 
     @AfterMethod
     public void tearDown() {
-
+        driver.close();
     }
 }

@@ -56,6 +56,6 @@ public class C01_Annotation {
 
     @AfterMethod
     public void tearDown() {
-        System.out.println("JUnitteki @After notsayonu gibi her methottan sonra AfterMethod calisir.");
+        System.out.println("JUnitteki @After notasyonu gibi her methottan sonra AfterMethod calisir.");
     }
 }
