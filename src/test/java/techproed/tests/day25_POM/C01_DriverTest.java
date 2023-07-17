@@ -15,7 +15,6 @@ public class C01_DriverTest {
     public void test02() {
         Driver.getDriver().get("https://amazon.com");
         Driver.getDriver().get("https://youtube.com");
-        Driver.closeDriver();
         Driver.getDriver().get("https://facebook.com");
 
          /*
@@ -24,5 +23,14 @@ public class C01_DriverTest {
         Driver daki if blogunu kullanmadigimiz zaman her get()
         methodu kullandigimizda yeni bir browser acti
          */
+    }
+
+    @Test
+    public void test03() {
+        Driver.getDriver().get("https://amazon.com");
+        Driver.getDriver().get("https://youtube.com");
+        Driver.closeDriver();
+        Driver.getDriver().get("https://facebook.com");
+
     }
 }

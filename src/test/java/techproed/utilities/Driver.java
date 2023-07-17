@@ -7,6 +7,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import java.time.Duration;
 
 public class Driver {
+
+    private Driver(){
+        /*
+       Driver class'indan obje olusturmanin onune gecebilmek icin
+       default constructor'i private yaparak bunu engellemis oluruz. Bu kaliba da Singleton patter denir
+        */
+    }
+
     /*
     POM (Page Object Model)
            Test senaryolarının daha az kod ile yazılmasına ve bakımının daha kolay yapılmasına olanak
