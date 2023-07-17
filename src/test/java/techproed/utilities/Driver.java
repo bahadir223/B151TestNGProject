@@ -17,10 +17,31 @@ public class Driver {
     static WebDriver driver;
 
     public static WebDriver getDriver() {
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+         /*
+    Driver'i her çağırdığımızda yeni bir pencere açılmasının önüne geçmek için
+    if bloğu içinde Eğer driver'a değer ATANMAMIŞSA değer ata, eğer değer atanmışsa
+    driver'i aynı sayfada return et
+        */
+        if (driver == null) {   // --> driver'a değer atanmamışsa
+            WebDriverManager.chromedriver().setup();
+            driver = new ChromeDriver();
+            driver.manage().window().maximize();
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+        }
+
         return driver;
+    }
+
+    public static void closeDriver() {
+        if (driver != null) {//-->driver'a deger ATANMISSA
+            driver.close();
+            driver = null;//-->driver'i kapattiktan sonra bosalt
+        }
+    }
+    public static void quitDriver() {
+        if (driver != null) {//-->driver'a deger ATANMISSA
+            driver.quit();
+            driver = null;//-->driver'i kapattiktan sonra bosalt
+        }
     }
 }
