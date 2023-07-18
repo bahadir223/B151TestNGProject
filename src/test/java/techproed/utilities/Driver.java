@@ -11,7 +11,7 @@ public class Driver {
     private Driver(){
         /*
        Driver class'indan obje olusturmanin onune gecebilmek icin
-       default constructor'i private yaparak bunu engellemis oluruz. Bu kaliba da Singleton patter denir
+       default constructor'i private yaparak bunu engellemis oluruz. Bu kaliba da Singleton pattern denir
         */
     }
 
@@ -41,7 +41,7 @@ public class Driver {
     }
 
     public static void closeDriver() {
-        if (driver != null) {//-->driver'a deger ATANMISSA
+        if (driver != null) {//-->driver'a deger ATANMISSA, boş değilse
             driver.close();
             driver = null;//-->driver'i kapattiktan sonra bosalt
         }

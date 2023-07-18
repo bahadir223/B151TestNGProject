@@ -33,4 +33,12 @@ public class C01_DriverTest {
         Driver.getDriver().get("https://facebook.com");
 
     }
+
+    @Test
+    public void test04() {
+        //Driver driver = new Driver();
+        // Singleton pattern kullandığımız için obje oluşturmanın
+        // önüne geçtik.
+
+    }
 }
