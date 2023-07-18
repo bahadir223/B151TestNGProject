@@ -30,22 +30,31 @@ public class Driver {
          /*
     Driver'i her çağırdığımızda yeni bir pencere açılmasının önüne geçmek için
     if bloğu içinde Eğer driver'a değer ATANMAMIŞSA değer ata, eğer değer atanmışsa
-    driver'i aynı sayfada return et
-        */
+    driver'i aynı sayfada return et.
+
+    /*
+        .properties dosyasına key olarak browser ve değerini aşağıda oluşturduğumuz switch case lerden birini seçeriz
+        ve seçtiğimiz driver çalışır
+    */
+
         if (driver == null) {   // --> driver'a değer atanmamışsa
             switch (ConfigReader.getProperty("browser")) {
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver();
+                    break;
                 case "edge":
                     WebDriverManager.edgedriver().setup();
                     driver = new EdgeDriver();
+                    break;
                 case "safari":
                     WebDriverManager.safaridriver().setup();
                     driver = new SafariDriver();
+                    break;
                 default:
                     WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver();
+                    break;
             }
 
             driver.manage().window().maximize();
