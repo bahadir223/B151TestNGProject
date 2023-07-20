@@ -23,6 +23,15 @@ public class BlueRentAlCarsPage {
     @FindBy(xpath = "//*[@role='alert']")
     public WebElement mesajVerify;
 
+    @FindBy(xpath = "//*[text()='Logout']")
+    public WebElement logOut;
+
+
+    @FindBy(xpath = "//*[@class='ajs-button ajs-ok']")  // --> logOut'a tiklayinca önümüze çıkan " OK "
+    public WebElement ok;
+
+
+
 
 
 
