@@ -20,6 +20,12 @@ public class BlueRentAlCarsPage {
     @FindBy(xpath = "(//*[@type='button'])[1]")
     public WebElement girisYapildiJack;
 
+    @FindBy(xpath = "//*[@role='alert']")
+    public WebElement mesajVerify;
+
+
+
+
 
 
 }
