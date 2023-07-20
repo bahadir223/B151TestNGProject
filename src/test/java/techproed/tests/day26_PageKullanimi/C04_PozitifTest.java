@@ -26,7 +26,7 @@ public class C04_PozitifTest {
                 Keys.TAB, ConfigReader.getProperty("adminPassword"), Keys.ENTER);
         ReusableMethods.bekle(2);
         //Giriş yapıldığını test edelim.
-        Assert.assertTrue(blueRentAlCarsPage.girisYapildiJack.getText().contains("Jack"));
+        Assert.assertTrue(blueRentAlCarsPage.girisYapildiVerify.getText().contains("Jack"));
 
         //Sayfayı kapatalım.
         Driver.closeDriver();
