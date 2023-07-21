@@ -28,6 +28,7 @@ public class C02_DataProviderTest {
         //Her arama icin sayfa resmi alalim.
         ReusableMethods.tumSayfaResmi();
         //Sayfayi kapatalim.
+        Driver.closeDriver();
 
     }
 }
