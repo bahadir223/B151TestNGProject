@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners>
+        <listener class-name="techproed.utilities.Listeners"></listener>
+    </listeners>
+    <test name="C02_ListenersTest2.java">
+        <classes>
+            <class name="techproed.tests.day30_Listeners.C02_ListenersTest2">
+                <methods>
+                    <include name="test01"/>
+                    <include name="test02"/>
+                    <include name="test03"/>
+                    <include name="test04"/>
+                </methods>
+            </class>
+            <class name="techproed.tests.day27_SmokeTest_Excel.C01_NegatifTest"></class>
+        </classes>
+    </test>
+</suite>
+
+<!-- .xml file ile istediğimiz class ve methodları çalıştırabiliriz. Bu çalıştırmak istediğimiz
+      classlar ve methodlar icin listeners kullanmak istersek; <suite> tag'indan sonra <listeners>
+      tagi olusturup sonrasında <listener> tagi oluşturup listeners class'imizin yolunu belirtiriz.
+      Böylece calistirdigimiz testlerde listeners yapisini kullanmis oluruz.
+-->
+
+<!--  Listeners yapisi ile .xml file üzerinden rapor alabiliriz. Bunun için .xml file üzerinde
+      sağ click yapip modifyRunConfiguration sekmesine tiklayip sonrasinda Listeners bölümünden
+      + işaretine basarak arama bölümüne report yazarak ilk çıkan reportu ekliyoruz. .xml file dan
+      testlerimizi calistirdiktan sonra test-output altinda raporumuzu görebiliriz.-->
