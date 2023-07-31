@@ -27,7 +27,7 @@ public class C03_DependsOnMethods {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
     }
 
-    @Test(priority = 1, dependsOnMethods = "test01")
+    @Test(priority = 1, dependsOnMethods = "test01" )
     public void test02() {
         //Amazon sayfasina gidelim.
         driver.get("https://amazon.com");
