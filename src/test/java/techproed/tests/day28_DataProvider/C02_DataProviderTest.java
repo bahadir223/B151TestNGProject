@@ -26,7 +26,7 @@ public class C02_DataProviderTest {
         googlePage.aramaKutusu.sendKeys(araclar, Keys.ENTER);
         ReusableMethods.bekle(3);
         //Her arama icin sayfa resmi alalim.
-        ReusableMethods.tumSayfaResmi();
+        //ReusableMethods.tumSayfaResmi();
         //Sayfayi kapatalim.
         Driver.closeDriver();
 

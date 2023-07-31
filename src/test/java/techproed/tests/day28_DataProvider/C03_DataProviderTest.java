@@ -27,7 +27,7 @@ public class C03_DataProviderTest {
         blueRentAlCarsPage.eMail.sendKeys(mail, Keys.TAB, password,Keys.ENTER);
         ReusableMethods.bekle(3);
         //Tüm sayfa resimlerini alalım.
-        ReusableMethods.tumSayfaResmi();
+        //ReusableMethods.tumSayfaResmi();
         //Sayfayı kapatalım.
         Driver.closeDriver();
     }
